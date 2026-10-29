@@ -295,9 +295,10 @@ test("serve captures real HTTP requests", { timeout: 25000 }, async () => {
       reader.on("line", (line) => {
         lines.push(line);
         const match = /Listening on (http:\/\/[^\s]+)/.exec(line);
-        if (match) {
+        if (match) baseUrl = match[1];
+        if (baseUrl && /Press Ctrl\+C to stop\./.test(line)) {
           clearTimeout(timer);
-          resolve(match[1]);
+          resolve(baseUrl);
         }
       });
       child.once("exit", (code) => {
