@@ -1,0 +1,41 @@
+{
+  "name": "wip-inspector",
+  "version": "0.1.0",
+  "description": "Local webhook inspector proxy with a terminal UI and replay",
+  "type": "module",
+  "license": "MIT",
+  "author": "escsyntax-sudo",
+  "bin": {
+    "wip": "bin/wip.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/wip.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@fastify/websocket": "^10.0.1",
+    "fastify": "^4.28.1",
+    "ws": "^8.18.0"
+  },
+  "keywords": [
+    "webhook",
+    "inspector",
+    "proxy",
+    "replay",
+    "tui",
+    "fastify"
+  ]
+}

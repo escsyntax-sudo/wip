@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.js text
+*.json text
+*.yml text
+*.md text
+bin/wip.js text eol=lf
